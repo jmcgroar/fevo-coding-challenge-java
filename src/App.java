@@ -86,7 +86,7 @@ public class App {
             jsonResponseOutput = mr.ProcessApiRequest(mrp);
 
             System.out.println("\nOutput from Rover Manifest request...\n");
-            //System.out.println(jsonResponseOutput.toString().replaceAll("\\\\",""));
+            System.out.println(jsonResponseOutput.toString().replaceAll("\\\\",""));
         }
     }
 }
