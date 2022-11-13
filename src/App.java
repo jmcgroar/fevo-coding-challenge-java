@@ -30,7 +30,7 @@ public class App {
 
         // User can break out of the loop below by entering 'quit' on the command line.
         while (true) {
-            System.out.println("Press <Enter> to retrieve photos from Mars rover '" + rover + "' or 'quit'");
+            System.out.println("Press <Enter> to retrieve photos from Mars rover '" + rover + "' or 'quit' to exit");
 
             consoleInput = System.console().readLine();
 
@@ -72,7 +72,7 @@ public class App {
             RoversApiRequest apiRequest = new RoversApiRequest();
             JsonObject jsonResponseOutput = apiRequest.ProcessApiRequest(requestParameters);
 
-            System.out.println("Output from Rover Photos request...");
+            System.out.println("\nOutput from Rover Photos request...\n");
             System.out.println(jsonResponseOutput.toString().replaceAll("\\\\",""));
 
             ManifestsApiRequestParameters mrp = new ManifestsApiRequestParameters();
@@ -85,8 +85,8 @@ public class App {
             ManifestsApiRequest mr = new ManifestsApiRequest();
             jsonResponseOutput = mr.ProcessApiRequest(mrp);
 
-            System.out.println("Output from Rover Manifest request...");
-            System.out.println(jsonResponseOutput.toString().replaceAll("\\\\",""));
+            System.out.println("\nOutput from Rover Manifest request...\n");
+            //System.out.println(jsonResponseOutput.toString().replaceAll("\\\\",""));
         }
     }
 }
